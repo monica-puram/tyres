@@ -1,9 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import HomeBody from './components/HomeBody';
-/*import Footer from './components/Footer';*/
-
-
+import Footer from './components/Footer';
 
 class Home extends React.Component{
 	render(){
@@ -12,7 +10,7 @@ class Home extends React.Component{
 				<Header/>
 				
 				<HomeBody/>
-				{/*<Footer/>*/}
+				 <Footer />
 			</React.Fragment>
 			)
 	}
