@@ -4,7 +4,6 @@ import Home from './Home';
 import About from './About';
 import Products from './Products';
 
-
 class App extends React.Component{
   render(){
     return(
