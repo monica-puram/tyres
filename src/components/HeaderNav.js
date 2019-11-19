@@ -16,7 +16,7 @@ class HeaderNav extends React.Component{
 							    <Nav className="mr-auto">
 							      <Nav.Link href="../Home">Home <IoIosHome/></Nav.Link>
 							      <NavDropdown as = {Nav.Link} href = "../products" title="Products" className = "dropdown">
-								    <div class = "dropdownMenu">  
+								    <div className = "dropdownMenu">  
 								        <NavDropdown.Item href="#action/3.1">2 Wheeler</NavDropdown.Item>
 								        <NavDropdown.Divider/>
 								        <NavDropdown.Item href="#action/3.2">3 wheeler</NavDropdown.Item>
