@@ -7,8 +7,8 @@ class Products extends React.Component{
 	{
 		return(
 			<React.Fragment>
-			<HeaderNav/>
-			<ProductsBody/>
+				<HeaderNav/>
+				<ProductsBody/>
 			</React.Fragment>
 			)
 

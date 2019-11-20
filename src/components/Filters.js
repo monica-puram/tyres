@@ -1,12 +1,15 @@
 import React from "react";
 import PriceFilter from './PriceFilter';
+import RatingFilter from './RatingFilter';
+import '../css/filters.css';
 
 class Filters extends React.Component{
 	render(){
 		return(
-			<React.Fragment>
+			<div className = 'filters'>
 				<PriceFilter/>
-			</React.Fragment>
+				<RatingFilter/>
+			</div>
 			)
 	}
 }
