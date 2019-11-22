@@ -43,35 +43,35 @@
 	},
 	{
 		"id": 7,
-		"title": "Tyre5",
+		"title": "Tyre7",
 		"price": "$30.00",
 		"rating": 4,
 		"image": "../images/crImage_2.jpg"
 	},
 	{
 		"id": 8,
-		"title": "Tyre5",
+		"title": "Tyre8",
 		"price": "$30.00",
 		"rating": 4,
 		"image": "../images/crImage_2.jpg"
 	},
 	{
 		"id": 9,
-		"title": "Tyre5",
+		"title": "Tyre9",
 		"price": "$30.00",
 		"rating": 4,
 		"image": "../images/crImage_2.jpg"
 	},
 	{
 		"id": 10,
-		"title": "Tyre5",
+		"title": "Tyre10",
 		"price": "$30.00",
 		"rating": 4,
 		"image": "../images/crImage_2.jpg"
 	},
 	{
 		"id": 11,
-		"title": "Tyre5",
+		"title": "Tyre11",
 		"price": "$30.00",
 		"rating": 4,
 		"image": "../images/crImage_2.jpg"
