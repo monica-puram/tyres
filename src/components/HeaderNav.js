@@ -25,7 +25,7 @@ class HeaderNav extends React.Component{
 								    </div>   
 							      </NavDropdown>
 							      <Nav.Link href="../About">About</Nav.Link>
-							      <Nav.Link href="../About">Contact Us</Nav.Link>
+							      <Nav.Link href="../ContactUs">Contact Us</Nav.Link>
 							    </Nav>
 							  </Navbar.Collapse>
 					  	

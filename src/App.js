@@ -3,6 +3,7 @@ import {BrowserRouter as StaticRouter, Route, Switch} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Products from './Products';
+import ContactUs from './ContactUs';
 
 class App extends React.Component{
   render(){
@@ -13,7 +14,7 @@ class App extends React.Component{
                 <Route exact path = '/' component = {Home}/>
                 <Route path = '/about' component = {About}/>
                 <Route path = '/products' component = {Products}/>
-                <Route path = '/contactUs' component = {Home}/>
+                <Route path = '/contactUs' component = {ContactUs}/>
                 <Route path = '/Home' component = {Home}/>
               </Switch>
             </StaticRouter>
