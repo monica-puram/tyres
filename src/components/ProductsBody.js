@@ -7,9 +7,16 @@ class ProductsBody extends React.Component{
 		return(
 			<Container>
 				<Row>
-					<Col md = {3} lg = {3} xl = {3}>
+					<Col md = {2} lg = {2} xl = {3}>
 						<Filters/>
 					</Col>
+<<<<<<< Updated upstream
+=======
+					<Col sm = {12} md = {10} lg = {10} xl = {9}>
+						<ProductList/>
+					</Col>
+					
+>>>>>>> Stashed changes
 				</Row>
 			</Container>
 			)

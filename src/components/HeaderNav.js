@@ -1,29 +1,35 @@
 import React from 'react';
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Nav, Dropdown, Button, ButtonGroup} from 'react-bootstrap';
 import { IoIosHome } from 'react-icons/io';
-import {Container, Row, Col} from 'react-bootstrap';
 import "../css/headerNav.css";
 
 class HeaderNav extends React.Component{
+	constructor(props){
+		super(props);
+		this.handleClick = this.handleClick.bind(this);
+	}
+	handleClick(e){
+		console.log(e.target.href);	
+	}
 	render(){ 
 		return(
 					<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-						
 					  		<Navbar.Brand href="../Home">SM Tyres</Navbar.Brand>
-					  	
 							  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 							  <Navbar.Collapse id="responsive-navbar-nav">
 							    <Nav className="mr-auto">
 							      <Nav.Link href="../Home">Home <IoIosHome/></Nav.Link>
-							      <NavDropdown as = {Nav.Link} href = "../products" title="Products" className = "dropdown">
-								    <div className = "dropdownMenu">  
-								        <NavDropdown.Item href="#action/3.1">2 Wheeler</NavDropdown.Item>
-								        <NavDropdown.Divider/>
-								        <NavDropdown.Item href="#action/3.2">3 wheeler</NavDropdown.Item>
-								        <NavDropdown.Divider/>
-								        <NavDropdown.Item href="#action/3.3">4 wheeler</NavDropdown.Item>
-								    </div>   
-							      </NavDropdown>
+							      <Dropdown as={ButtonGroup}  >
+								    <Button as = "a" className = "dropdown" href = "../Products">Products</Button>
+								    <Dropdown.Toggle className = "dropdown" split id="dropdown-custom-2" />
+								    <Dropdown.Menu>
+								      <Dropdown.Item eventKey="1">2 Wheeler</Dropdown.Item>
+								      <Dropdown.Divider />
+								      <Dropdown.Item eventKey="2">3 Wheeler</Dropdown.Item>
+								      <Dropdown.Divider />
+								      <Dropdown.Item eventKey="3">4 Wheeler</Dropdown.Item>
+								    </Dropdown.Menu>
+								  </Dropdown>
 							      <Nav.Link href="../About">About</Nav.Link>
 							      <Nav.Link href="../About">Contact Us</Nav.Link>
 							    </Nav>
