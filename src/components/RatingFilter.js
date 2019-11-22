@@ -10,7 +10,6 @@ class RatingFilter extends React.Component{
 		this.handleRatingChange=this.handleRatingChange.bind(this);
 	}
 	handleRatingChange(value) {
-		console.log("Rating : ",value);
 		this.setState({rating:value});
 	}
 	
@@ -21,7 +20,8 @@ class RatingFilter extends React.Component{
 				<Rating initialRating={this.state.rating}
 						emptySymbol="glyphicon glyphicon-star-empty"
   						fullSymbol="glyphicon glyphicon-star"
-  						onClick = {this.handleRatingChange}/>
+  						onClick = {this.handleRatingChange}
+  						style = {{"color": "orange"}}/>
 			</div>
 
 			)
