@@ -11,7 +11,7 @@ class ProductList extends React.Component{
 			productList: [],
 			error: '',
 			currentPage :1,
-			postsPerPage : 5
+			postsPerPage : 12
 		}
 	}
 	componentDidMount(){
@@ -31,10 +31,26 @@ class ProductList extends React.Component{
 			this.setState(error);
 		})
 	}
+
 	render(){ 
+		const price = this.props.price;
+		const rating = this.props.rating;
+		let totalPosts = 0;
+		let tempArr = [];
+		if(rating !=0){
+			tempArr = this.state.productList.filter((item)=> (item.rating==rating));
+		}
 		const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
 		const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
-		const currentPosts = this.state.productList.slice(indexOfFirstPost,indexOfLastPost);
+		let currentPosts=[];
+		if(tempArr.length != 0) {
+			 currentPosts = tempArr.slice(indexOfFirstPost,indexOfLastPost);
+			 totalPosts = tempArr.length;	
+		} 	
+		if(rating ==0 && price ==0){
+			currentPosts = this.state.productList.slice(indexOfFirstPost,indexOfLastPost);
+			totalPosts = this.state.productList.length;
+		}
 
 		const paginate= (pageNumber) => {
 			this.setState({
@@ -42,13 +58,13 @@ class ProductList extends React.Component{
 			})
 		}
 		return(
-			<div>
+			<div style = {{"minHeight": "500px"}}>
 				<h3>Products List:</h3>
 				<ul>
 					{
 						currentPosts.length>0 ?
 						currentPosts.map((item)=>
-							<Card as = "li" style = {{"display": "inline-block", "width": "25%", "margin": "10px" }}>
+							<Card as = "li" key = {item.id} style = {{"display": "inline-block", "width": "25%", "margin": "10px" }}>
 								<Card.Img variant="top" src={item.image} />
 								<Card.Body>
 									<Card.Title>{item.title}</Card.Title>
@@ -69,7 +85,7 @@ class ProductList extends React.Component{
 				</ul>
 				<ProductsPagination 
 					postsPerPage = {this.state.postsPerPage} 
-					totalPosts = {this.state.productList.length} 
+					totalPosts = {totalPosts} 
 					paginate = {paginate}/>
 			</div>
 			)
