@@ -2,53 +2,25 @@ import React from 'react';
 import data from '../json/products.json';
 import{CardGroup, Card, Button} from 'react-bootstrap';
 import Rating from 'react-rating';
-import ProductsPagination from './ProductsPagination';
 
 class ProductList extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			productList: [],
-			error: '',
-			currentPage :1,
-			postsPerPage : 5
+			productList: data
 		}
-	}
-	componentDidMount(){
-		let url = new Request('http://localhost:3000/products.json');
-		fetch(url)
-		.then(function(response){
-			return response.json();
-			}
-		)
-		.then((result) => {
-			console.log(result);
-          this.setState({
-            productList: result
-          })
-      })
-		.catch(error => {
-			this.setState(error);
-		})
 	}
 	render(){ 
-		const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
-		const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
-		const currentPosts = this.state.productList.slice(indexOfFirstPost,indexOfLastPost);
-
-		const paginate= (pageNumber) => {
-			this.setState({
-				currentPage :pageNumber
-			})
-		}
+		console.log(this.state.productList);
 		return(
 			<div>
 				<h3>Products List:</h3>
-				<ul>
+				<CardGroup>
 					{
-						currentPosts.length>0 ?
-						currentPosts.map((item)=>
-							<Card as = "li" style = {{"display": "inline-block", "width": "25%", "margin": "10px" }}>
+
+						this.state.productList.map((item)=>
+
+							<Card>
 								<Card.Img variant="top" src={item.image} />
 								<Card.Body>
 									<Card.Title>{item.title}</Card.Title>
@@ -58,19 +30,15 @@ class ProductList extends React.Component{
 									<Rating initialRating = {item.rating}
 											readonly 
 									      	emptySymbol="glyphicon glyphicon-star-empty"
-				  							fullSymbol="glyphicon glyphicon-star"
-				  							style = {{"color": "orange"}}/>
+				  							fullSymbol="glyphicon glyphicon-star"/>
 				  					<Button variant="success">Add to cart</Button>
-								</Card.Body>									    
+								</Card.Body>
+									    
 							</Card>
 						)
-						: <h1>No products found</h1>
+
 					}	  
-				</ul>
-				<ProductsPagination 
-					postsPerPage = {this.state.postsPerPage} 
-					totalPosts = {this.state.productList.length} 
-					paginate = {paginate}/>
+				</CardGroup>
 			</div>
 			)
 	}
