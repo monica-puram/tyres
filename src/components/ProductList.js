@@ -38,8 +38,6 @@ class ProductList extends React.Component{
 		const category = this.props.category;
 		console.log(category);
 
-
-
 		const price = this.props.price;
 		const rating = this.props.rating;
 		let totalPosts = 0;

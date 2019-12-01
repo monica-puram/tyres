@@ -5,13 +5,12 @@ import Thumbnail2 from '../assets/images/thumbnail2.jpg';
 import Thumbnail3 from '../assets/images/crImage_2.jpg';
 import '../css/threeColumnGrid.css';
 
-
 class ThreeColumnGrid extends React.Component{
 	render(){
 		return(
 			<CardGroup className = "twoColGrid">
 				  <Card className = "card">
-				    <a href= "#"><Card.Img variant="top" src={Thumbnail1} className = "d-block w-100" /></a>
+				    <a href= "/products/2-wheeler"><Card.Img variant="top" src={Thumbnail1} className = "d-block w-100" /></a>
 				    <Card.Body>
 				      <Card.Title>2 wheeler</Card.Title>
 				      <Card.Text>
@@ -22,7 +21,7 @@ class ThreeColumnGrid extends React.Component{
 			
 				  </Card>
 				  <Card className = "card">
-				    <a href = "#"><Card.Img variant="top" src={Thumbnail2} className = "d-block w-100" /></a>
+				    <a href = "/products/3-wheeler"><Card.Img variant="top" src={Thumbnail2} className = "d-block w-100" /></a>
 				    <Card.Body>
 				      <Card.Title>3 wheeler</Card.Title>
 				      <Card.Text>
@@ -33,7 +32,7 @@ class ThreeColumnGrid extends React.Component{
 				   
 				  </Card>
 				  <Card className = "card">
-				    <a href = "#"><Card.Img variant="top" src={Thumbnail3} className = "d-block w-100" /></a>
+				    <a href = "/products/4-wheeler"><Card.Img variant="top" src={Thumbnail3} className = "d-block w-100" /></a>
 				    <Card.Body>
 				      <Card.Title>4 wheeler</Card.Title>
 				      <Card.Text>
