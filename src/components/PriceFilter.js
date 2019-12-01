@@ -6,7 +6,6 @@ import '../css/priceFilter.css';
 class PriceFilter extends React.Component{
 	constructor(props) {
     super(props);
- 
     this.state = { value: 0 };
     this.handlePriceChange = this.handlePriceChange.bind(this);
   }

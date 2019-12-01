@@ -13,7 +13,6 @@ class ProductsBody extends React.Component{
 	}
 	this.handleFilterValues = this.handleFilterValues.bind(this);
 }	
-
 handleFilterValues(rating, price) {
 	if(rating != null) {
 		this.setState({

@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"title": "Tyre1",
-		"price": "$30.00",
+		"price": "$20.00",
 		"rating": 4,
 		"category": "2-wheeler",
 		"image": "../images/crImage_2.jpg"

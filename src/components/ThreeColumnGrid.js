@@ -5,7 +5,6 @@ import Thumbnail2 from '../assets/images/thumbnail2.jpg';
 import Thumbnail3 from '../assets/images/crImage_2.jpg';
 import '../css/threeColumnGrid.css';
 
-
 class ThreeColumnGrid extends React.Component{
 	render(){
 		return(
