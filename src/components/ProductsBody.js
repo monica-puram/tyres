@@ -13,7 +13,6 @@ class ProductsBody extends React.Component{
 	}
 	this.handleFilterValues = this.handleFilterValues.bind(this);
 }	
-
 handleFilterValues(rating, price) {
 	if(rating != null) {
 		this.setState({
@@ -35,7 +34,7 @@ render(){
 						<Filters rating={this.state.rating} price = {this.state.price} handleFilterValues = {this.handleFilterValues}/>
 					</Col>
 					<Col sm = {12} md = {10} lg = {10} xl = {9}>
-						<ProductList rating = {this.state.rating} price = {this.state.price}/>
+						<ProductList category = {this.props.category} rating = {this.state.rating} price = {this.state.price}/>
 					</Col>
 				</Row>
 			</Container>

@@ -10,10 +10,11 @@ class App extends React.Component{
     return(
           <React.Fragment>
             <StaticRouter basename = "LibraryProj">
-              <Switch>
+              <Switch>              
                 <Route exact path = '/' component = {Home}/>
                 <Route path = '/about' component = {About}/>
-                <Route path = '/products' component = {Products}/>
+                <Route exact path = '/products' component = {Products}/>
+                <Route path = '/products/:category' component = {Products}/>
                 <Route path = '/contactUs' component = {ContactUs}/>
                 <Route path = '/Home' component = {Home}/>
               </Switch>
