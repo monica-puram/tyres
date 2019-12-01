@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../json/products.json';
-import{CardGroup, Card, Button} from 'react-bootstrap';
+import {CardGroup, Card, Button,Alert} from 'react-bootstrap';
 import Rating from 'react-rating';
 import ProductsPagination from './ProductsPagination';
 
@@ -33,12 +33,26 @@ class ProductList extends React.Component{
 	}
 
 	render(){ 
+
+		//Category
+		const category = this.props.category;
+		console.log(category);
+
+
+
 		const price = this.props.price;
 		const rating = this.props.rating;
 		let totalPosts = 0;
-		let tempArr = [];
+		let tempArr = this.state.productList;
+		if(category!=null){
+			tempArr = tempArr.filter((item)=> (item.category == category));
+		}
+
 		if(rating !=0){
-			tempArr = this.state.productList.filter((item)=> (item.rating==rating));
+			tempArr = tempArr.filter((item)=> (item.rating==rating));
+		}
+		if(price !=0 && tempArr.length > 0){
+			tempArr = tempArr.filter((item)=> (item.price.substring(1,price.length) <= price));
 		}
 		const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
 		const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
@@ -47,7 +61,7 @@ class ProductList extends React.Component{
 			 currentPosts = tempArr.slice(indexOfFirstPost,indexOfLastPost);
 			 totalPosts = tempArr.length;	
 		} 	
-		if(rating ==0 && price ==0){
+		if(rating ==0 && price ==0 && category == null){
 			currentPosts = this.state.productList.slice(indexOfFirstPost,indexOfLastPost);
 			totalPosts = this.state.productList.length;
 		}
@@ -88,6 +102,7 @@ class ProductList extends React.Component{
 					totalPosts = {totalPosts} 
 					paginate = {paginate}/>
 			</div>
+			
 			)
 	}
 }

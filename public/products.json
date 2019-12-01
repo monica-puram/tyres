@@ -4,6 +4,7 @@
 		"title": "Tyre1",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "2-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -11,13 +12,15 @@
 		"title": "Tyre2",
 		"price": "$30.00",
 		"rating": 2,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
 		"id": 3,
 		"title": "Tyre3",
-		"price": "$30.00",
+		"price": "$50.00",
 		"rating": 4,
+		"category": "2-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -25,6 +28,7 @@
 		"title": "Tyre4",
 		"price": "$30.00",
 		"rating": 5,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -32,6 +36,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -39,6 +44,7 @@
 		"title": "Tyre6",
 		"price": "$30.00",
 		"rating": 3,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -46,13 +52,15 @@
 		"title": "Tyre7",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
 		"id": 8,
 		"title": "Tyre8",
-		"price": "$30.00",
+		"price": "$10.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -60,6 +68,7 @@
 		"title": "Tyre9",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -67,6 +76,7 @@
 		"title": "Tyre10",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -74,6 +84,7 @@
 		"title": "Tyre11",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -81,6 +92,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -88,6 +100,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -95,6 +108,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -102,6 +116,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -109,6 +124,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -116,6 +132,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -123,6 +140,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -130,6 +148,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -137,6 +156,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -144,6 +164,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -151,6 +172,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "3-wheeler",
 		"image": "../images/crImage_2.jpg"
 	},
 	{
@@ -158,6 +180,7 @@
 		"title": "Tyre5",
 		"price": "$30.00",
 		"rating": 4,
+		"category": "4-wheeler",
 		"image": "../images/crImage_2.jpg"
 	}
 

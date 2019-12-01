@@ -20,11 +20,12 @@ class PriceFilter extends React.Component{
 		return(
 			<div className = "priceFilter">
 				<span>Select Price Range:</span>
-				<InputRange
-			        maxValue={20}
+				<InputRange 
+			        maxValue={100}
 			        minValue={0}
 			        value={this.state.value}
-			        onChange={this.handlePriceChange} />
+			        onChange={this.handlePriceChange}
+			         />
 		    </div>
 
 			)
