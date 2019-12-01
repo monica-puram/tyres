@@ -1,6 +1,5 @@
 import React from 'react';
-import data from '../json/products.json';
-import{CardGroup, Card, Button} from 'react-bootstrap';
+import{Card, Button} from 'react-bootstrap';
 import Rating from 'react-rating';
 import ProductsPagination from './ProductsPagination';
 
@@ -37,17 +36,17 @@ class ProductList extends React.Component{
 		const rating = this.props.rating;
 		let totalPosts = 0;
 		let tempArr = [];
-		if(rating !=0){
+		if(rating !== 0){
 			tempArr = this.state.productList.filter((item)=> (item.rating==rating));
 		}
 		const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
 		const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
 		let currentPosts=[];
-		if(tempArr.length != 0) {
+		if(tempArr.length !== 0) {
 			 currentPosts = tempArr.slice(indexOfFirstPost,indexOfLastPost);
 			 totalPosts = tempArr.length;	
 		} 	
-		if(rating ==0 && price ==0){
+		if(rating === 0 && price === 0){
 			currentPosts = this.state.productList.slice(indexOfFirstPost,indexOfLastPost);
 			totalPosts = this.state.productList.length;
 		}
